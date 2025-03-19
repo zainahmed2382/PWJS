@@ -7,27 +7,72 @@
 </head>
 <body>
     <input type="text" name="" id="display" placeholder="" readonly>;
+   
 
-
-
-
-    <button onclick="appendcharacter()">/</button>
-    <button onclick="appendcharacter()">*</button>
+    <button onclick="appendcharacter('/')">/</button>
+    <button onclick="appendcharacter('*')">*</button>
     <button onclick="appendcharacter()">DEL</button>
-    <button onclick="appendcharacter()">7</button>
-    <button onclick="appendcharacter()">8</button>
-    <button onclick="appendcharacter()">9</button>
-    <button onclick="appendcharacter()">-</button>
-    <button onclick="appendcharacter()">4</button>
-    <button onclick="appendcharacter()">5</button>
-    <button onclick="appendcharacter()">6</button>
-    <button onclick="appendcharacter()">+</button>
-    <button onclick="appendcharacter()">1</button>
-    <button onclick="appendcharacter()">2</button>
-    <button onclick="appendcharacter()">3</button>
+    <button onclick="appendcharacter('7')">7</button>
+    <button onclick="appendcharacter('8')">8</button>
+    <button onclick="appendcharacter('9')">9</button>
+    <button onclick="appendcharacter('-')">-</button>
+    <button onclick="appendcharacter('4')">4</button>
+    <button onclick="appendcharacter('5')">5</button>
+    <button onclick="appendcharacter('6')">6</button>
+    <button onclick="appendcharacter('+')">+</button>
+    <button onclick="appendcharacter('1')">1</button>
+    <button onclick="appendcharacter('2')">2</button>
+    <button onclick="appendcharacter('3')">3</button>
     <button onclick="appendcharacter()">=</button>
-    <button onclick="appendcharacter()">0</button>
-    <button onclick="appendcharacter()">.</button>
+    <button onclick="appendcharacter('0')">0</button>
+    <button onclick="appendcharacter('.')">.</button>
   
+    <script>
+   
+        let displayValue = document.getElementById('display');
+        function appendcharacter(char) {
+            displayValue += char
+            if (char === '=') {
+                calculate();
+            }
+        }
+        // let currentOperation = '';
+        // let currentNumber = '';
+        // let previousNumber = '';
+
+        // function appendcharacter(character) {
+        //     character = character || this.innerText;
+        //     displayValue.value += character;
+        //     currentNumber += character;
+        // }
+        // function calculate() {
+        //     let result;
+        //     try {
+        //         result = eval(previousNumber + currentOperation + currentNumber);
+        //     } catch (error) {
+        //         result = 'Error';
+        //     }
+        //     displayValue.value = result;
+        //     currentNumber = result;
+        //     previousNumber = '';
+        //     currentOperation = '';
+        // }
+        // function performOperation(operation) {
+
+        //     if (currentNumber) {
+        //         calculate();
+        //     }
+        //     currentOperation = operation;
+        //     previousNumber = currentNumber;
+        //     currentNumber = '';
+        // }
+        // function clearDisplay() {
+        //     displayValue.value = '';
+        //     previousNumber = '';
+        //     currentNumber = '';
+        //     currentOperation = '';
+        // }
+
+ </script>
 </body>
 </html>
