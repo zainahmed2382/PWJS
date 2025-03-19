@@ -5,74 +5,269 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 250px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+    }
+
+
+
+
+   
+   
+
+    .w {
+        
+        width: 90%;
+        height: 50px;
+        font-size: 24px;
+        border: 2px solid black;
+        background-color: gray;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        
+        
+    }
+
+ .w1 {
+        width: 25%;
+        height: 50px;
+        font-size: 24px;
+        border:  2px solid black;;
+        background-color: orangered;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+    }   
+
+ .w2 {
+        width: 50%;
+        height: 50px;
+        font-size: 24px;
+        border: 2px solid black;
+        background-color: orangered;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    .w3 {
+        width: 25%;
+        height: 50px;
+        font-size: 24px;
+        border: 2px solid black;
+        background-color: orangered;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;  
+        margin: 4px 2px;
+        cursor: pointer;
+
+    }
+
+    .w4 {
+        width: 75%;
+        height: 50px;
+        font-size: 24px;
+        border:  2px solid black;
+        background-color:orangered;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+
+    }
+
+    .w5 {
+
+position: absolute;
+bottom:  51%;
+/* width: 100%;
+height: 50px; */
+width: 25%;
+height: 50px;
+font-size: 24px;
+border: 2px solid black;
+background-color: orangered;
+color: black;
+text-align: center;
+text-decoration: none;
+display: inline-block;  
+margin: 4px 2px;
+cursor: pointer;
+
+}
+
+
+
+    .w6 {
+
+        position: absolute;
+        bottom:  61%;
+        /* width: 100%;
+        height: 50px; */
+        width: 25%;
+        height: 50px;
+        font-size: 24px;
+        border: 2px solid black;
+        background-color: orangered;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;  
+        margin: 4px 2px;
+        cursor: pointer;
+
+    }
+
+    .w6 {
+
+position: absolute;
+bottom:  61%;
+/* width: 100%;
+height: 50px; */
+width: 25%;
+height: 50px;
+font-size: 24px;
+border: 2px solid black;
+background-color: orangered;
+color: black;
+text-align: center;
+text-decoration: none;
+display: inline-block;  
+margin: 4px 2px;
+cursor: pointer;
+
+}   
+    
+.w9{
+        width: 50%;
+        height: 50px;
+        font-size: 24px;
+        border: 2px solid black;
+        background-color: orangered;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;  
+        margin: 4px 2px;
+        cursor: pointer;
+
+    }
+   
+    .w8 {
+        width: 25%;
+        height: 50px;
+        font-size: 24px;
+        border: 2px solid black;
+        background-color: orangered;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;  
+        margin: 4px 2px;
+        cursor: pointer;
+
+    }
+
+    .w7 {
+        width: 50%;
+        height: 50px;
+        font-size: 24px;
+        border: 2px solid black;
+        background-color: orangered;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    .hole{
+        text-align: center;
+    }
+      
+    .w10 {
+        width: 50%;
+        height: 50px;
+            position: relative;
+            right: 180px;
+        font-size: 24px;
+        border: 2px solid black;
+        background-color: orangered;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+</style>
 <body>
-    <input type="text" name="" id="display" placeholder="" readonly>;
+    <div class="hole"> 
+    <input class="w" type="text" name="" id="display" placeholder="" readonly >
    
-
-    <button onclick="appendcharacter('/')">/</button>
-    <button onclick="appendcharacter('*')">*</button>
-    <button onclick="appendcharacter()">DEL</button>
-    <button onclick="appendcharacter('7')">7</button>
-    <button onclick="appendcharacter('8')">8</button>
-    <button onclick="appendcharacter('9')">9</button>
-    <button onclick="appendcharacter('-')">-</button>
-    <button onclick="appendcharacter('4')">4</button>
-    <button onclick="appendcharacter('5')">5</button>
-    <button onclick="appendcharacter('6')">6</button>
-    <button onclick="appendcharacter('+')">+</button>
-    <button onclick="appendcharacter('1')">1</button>
-    <button onclick="appendcharacter('2')">2</button>
-    <button onclick="appendcharacter('3')">3</button>
-    <button onclick="appendcharacter()">=</button>
-    <button onclick="appendcharacter('0')">0</button>
-    <button onclick="appendcharacter('.')">.</button>
-  
+    <button class="w1" onclick="clearDisplay()">AC</button>
+    <button class="w1"onclick="appendcharacter('/')">/</button>
+    <button class="w1"onclick="appendcharacter('*')">*</button>
+    <button class="w1"onclick="deleteLast()">DEL</button>
+    <button class="w2" onclick="appendcharacter('7')">7</button>
+    <button class="w10" onclick="appendcharacter('8')">8</button>
+    <button class="w10" onclick="appendcharacter('9')">9</button>
+    <button class="w2" onclick="appendcharacter('-')">-</button>
+    <button class="w6" onclick="appendcharacter('4')">4</button>
+    <button class="w5" onclick="appendcharacter('5')">5</button>
+    <button class="w3" onclick="appendcharacter('6')">6</button>
+    <button class="w3" onclick="appendcharacter('+')">+</button>
+    <button class="w3" onclick="appendcharacter('1')">1</button>
+    <button class="w3" onclick="appendcharacter('2')">2</button>
+    <button class="w3" onclick="appendcharacter('3')">3</button>
+    <button class="w9" onclick="appendcharacter('0')">0</button>
+     <button class="w8" nclick="appendcharacter('.')">.</button>
+   <button class="w7" onclick="calculateResult()">=</button>
+    
     <script>
+         function appendcharacter(character) {
+        var display = document.getElementById('display').value;
+        document.getElementById('display').value = display + character;
+    }
+    function clearDisplay() {
+        document.getElementById('display').value = "";
+    }
+    function deleteLast() {
+        var display = document.getElementById('display').value;
+        document.getElementById('display').value = display.slice(0, -1);
+    }
+    function calculateResult() {
+        var display = document.getElementById('display').value;
+        document.getElementById('display').value = eval(display);
+    }
    
-        let displayValue = document.getElementById('display');
-        function appendcharacter(char) {
-            displayValue += char
-            if (char === '=') {
-                calculate();
-            }
-        }
-        // let currentOperation = '';
-        // let currentNumber = '';
-        // let previousNumber = '';
+      </script>  
+ </div>
 
-        // function appendcharacter(character) {
-        //     character = character || this.innerText;
-        //     displayValue.value += character;
-        //     currentNumber += character;
-        // }
-        // function calculate() {
-        //     let result;
-        //     try {
-        //         result = eval(previousNumber + currentOperation + currentNumber);
-        //     } catch (error) {
-        //         result = 'Error';
-        //     }
-        //     displayValue.value = result;
-        //     currentNumber = result;
-        //     previousNumber = '';
-        //     currentOperation = '';
-        // }
-        // function performOperation(operation) {
 
-        //     if (currentNumber) {
-        //         calculate();
-        //     }
-        //     currentOperation = operation;
-        //     previousNumber = currentNumber;
-        //     currentNumber = '';
-        // }
-        // function clearDisplay() {
-        //     displayValue.value = '';
-        //     previousNumber = '';
-        //     currentNumber = '';
-        //     currentOperation = '';
-        // }
-
- </script>
 </body>
 </html>
