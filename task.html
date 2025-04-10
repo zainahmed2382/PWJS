@@ -19,16 +19,19 @@
             margin: 10px 0;
         }
         .f1{
-          
+            position: relative;
+            top: 300px;
+          text-align: center;
         }
     </style>
 </head>
 <body>
-    <input type="text" id="movie" placeholder="Enter movie name" class="f1">
-    <button type="submit" onclick="getmovie()">Search karo yaaaar</button>
+    <div class="f1" >
+    <input type="text" id="movie" placeholder="Enter movie name" >
+    <button type="submit" onclick="getmovie()">Search</button>
 
-    <div id="movie-details" class="movie-info"></div>
-
+    <div id="movie-details" class="movie-info" ></div>
+</div>
     <script>
         async function getmovie() {
             var movie = document.getElementById("movie").value;
