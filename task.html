@@ -19,9 +19,10 @@
             margin: 10px 0;
         }
         .f1{
-            position: relative;
-            top: 300px;
+            position:absolute;
+           bottom: 459px;
           text-align: center;
+          left: 76.9%;
         }
         body{
             background-color:#4b1515  
@@ -31,7 +32,7 @@
             padding: 70px;
             position: relative;
             bottom: 200px;
-            border-radius: 20px;
+          
         }
     </style>
 </head>
@@ -45,48 +46,47 @@
     <div id="movie-details" class="movie-info" ></div>
 </div>
     <script>
-        async function getmovie() {
-            var movie = document.getElementById("movie").value;
-            const apikey = "779c102f";
-            const url = `http://www.omdbapi.com/?apikey=${apikey}&t=${movie}`;
-            
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
+       async function getmovie() {
+    var movie = document.getElementById("movie").value;
+    const apikey = "779c102f";
+    const url = `http://www.omdbapi.com/?apikey=${apikey}&t=${movie}`;
+    
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
 
-                if (data.Response === "False") {
-                    document.getElementById("movie-details").innerHTML = `<p>Movie not found. Please try again.</p>`;
-                } else {
-                    document.getElementById("movie-details").innerHTML = `
-                        <h2>${data.Title}</h2>
-                        <img src="${data.Poster}" alt="${data.Title} Poster">
-                        <p><strong>Actors:</strong> ${data.Actors}</p>
-                        <p><strong>Rated:</strong> ${data.Rated}</p>
-                        <p><strong>Released:</strong> ${data.Released}</p>
-                        <p><strong>Runtime:</strong> ${data.Runtime}</p>
-                        <p><strong>Awards:</strong> ${data.Awards}</p>
-                        <p><strong>IMDB Rating:</strong> ${data.imdbRating}</p>
-                        <p><strong>IMDB Votes:</strong> ${data.imdbVotes}</p>
-                        <p><strong>IMDB ID:</strong> ${data.imdbID}</p>
-                        <p><strong>Director:</strong> ${data.Director}</p>
-                        <p><strong>Writer:</strong> ${data.Writer}</p>
-                        <p><strong>Language:</strong> ${data.Language}</p>
-                        <p><strong>Country:</strong> ${data.Country}</p>
-                        <p><strong>Production:</strong> ${data.Production}</p>
-                        <p><strong>Box Office:</strong> ${data.BoxOffice}</p>
-                        <p><strong>Website:</strong> ${data.Website}</p>
-                        <p><strong>Response:</strong> ${data.Response}</p>
-                        <p><strong>Year:</strong> ${data.Year}</p>
-                        <p><strong>Genre:</strong> ${data.Genre}</p>
-                        <p><strong>Plot:</strong> ${data.Plot}</p>
-                    `;
-                }
-            } 
-            catch (error) {
-                console.error("Error fetching movie details:", error);
-                document.getElementById("movie-details").innerHTML = `<p>Error fetching movie details. Please try again.</p>`;
-            }
+        if (data.Response === "False") {
+            alert("Movie not found. Please try again.");
+        } else {
+            alert(
+                `Title: ${data.Title}\n` +
+                `Actors: ${data.Actors}\n` +
+                `Rated: ${data.Rated}\n` +
+                `Released: ${data.Released}\n` +
+                `Runtime: ${data.Runtime}\n` +
+                `Awards: ${data.Awards}\n` +
+                `IMDB Rating: ${data.imdbRating}\n` +
+                `IMDB Votes: ${data.imdbVotes}\n` +
+                `IMDB ID: ${data.imdbID}\n` +
+                `Director: ${data.Director}\n` +
+                `Writer: ${data.Writer}\n` +
+                `Language: ${data.Language}\n` +
+                `Country: ${data.Country}\n` +
+                `Production: ${data.Production}\n` +
+                `Box Office: ${data.BoxOffice}\n` +
+                `Website: ${data.Website}\n` +
+                `Response: ${data.Response}\n` +
+                `Year: ${data.Year}\n` +
+                `Genre: ${data.Genre}\n` +
+                `Plot: ${data.Plot}`
+            );
         }
+    } 
+    catch (error) {
+        alert("Error fetching movie details: " + error);
+    }
+}
+
     </script>
 </body>
 </html>
