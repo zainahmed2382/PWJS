@@ -1,0 +1,28 @@
+create database Employee_managementage;
+use employee_managementage;
+
+create table EMPLOYE_TABLE (
+ID int primary key auto_increment,
+NAME varchar(100),
+SALARY int,
+Joining_Date varchar(100),
+POSITION varchar(100)
+);
+
+
+create table BANK_ACOUNT_TABLE (
+ACC_ID bigint primary key auto_increment,
+NAME varchar(100),
+AMOUNT int,
+Creation_Date varchar(100),
+EMP_ID INT
+);
+
+
+create table BANK_EMPLOYE_TABLE (
+ID bigint primary key auto_increment,
+NAME varchar(100),
+SALARY int
+);
+
+alter table BANK_ACOUNT_TABLE add foreign key(EMP_ID) references EMPLOYE_TABLE(ID);
